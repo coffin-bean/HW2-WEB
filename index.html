@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; justify-content: center">
+<p id="size" style="font-family: Inter, sans-serif; font-size: 24px; color: #000;"></p>
+
+    <script>
+      function Size() {
+
+          let width = window.outerWidth
+          let height = window.outerHeight
+
+        document.getElementById("size").innerHTML = `Текущие размеры окна: ширина: ${width}px высота: ${height}px`;
+      }
+
+
+      function Func() {
+        if (debounce) clear(debounce);
+        debounce = setTimeout(Size, 1000);
+      }
+
+      window.addEventListener('resize', Func);
+
+      Size();
+    </script>
+</body>
+
+</html>
